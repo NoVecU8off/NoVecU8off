@@ -50,15 +50,15 @@ impl Language {
 }
 
 pub struct Experience {
-    language_experience: HashMap<Language, f32>,
+    language_experience: HashMap<Language, u32>,
 }
 
 impl Experience {
     pub fn new() -> Self {
         let mut language_experience = HashMap::new();
-        language_experience.insert(Language::new("Solidity"), 1.0); // as years
-        language_experience.insert(Language::new("Rust"), 0.5); // as years
-        language_experience.insert(Language::new("Golang"), 0.17); // as years (at least I can read Go)
+        language_experience.insert(Language::new("Solidity"), 10); // as months
+        language_experience.insert(Language::new("Rust"), 4); // as months
+        language_experience.insert(Language::new("Golang"), 1); // as months (at least I can read Go)
 
         Experience {
             language_experience,
